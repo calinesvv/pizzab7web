@@ -17,10 +17,16 @@ pizzaJson.map((item, index) => {
     pizzaItem.querySelector('a').addEventListener('click', (e) => {
         e.preventDefault();
 
+
+
         let key = e.target.closest('.pizza-item').getAttribute('data-key');
+
+        modalKey = key;
+
 
         modalQt = 1;
         modalQt = key;
+
 
         c('.pizzaBig img').src = pizzaJson[key].img;
         c('.pizzaInfo h1').innerHTML = pizzaJson[key].name;
